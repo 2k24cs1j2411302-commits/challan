@@ -1,0 +1,154 @@
+{
+  "useCases": [
+    {
+      "id": "upi_scam",
+      "title": "UPI / Online Payment Scam",
+      "description": "Issues related to unauthorized or fraudulent digital payments.",
+      "variants": [
+        {
+          "id": "money_debited",
+          "trigger": "Money debited without my consent",
+          "shouldDo": [
+            "Call 1930 immediately and report the transaction",
+            "Inform your bank through its official app or helpline",
+            "Save transaction ID, date, and screenshots"
+          ],
+          "shouldNotDo": [
+            "Do not share OTP, PIN, or card details",
+            "Do not trust recovery calls or messages"
+          ],
+          "lawyer": {
+            "required": false,
+            "condition": "Only if the bank refuses action or FIR is demanded"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "fir_issue",
+      "title": "FIR Related Issue",
+      "description": "Concerns related to FIR filing, threats, or status.",
+      "variants": [
+        {
+          "id": "fir_threat",
+          "trigger": "Someone is threatening to file an FIR",
+          "shouldDo": [
+            "Stay calm and ask for written complaint details",
+            "Preserve messages or call records",
+            "Consult police station jurisdiction"
+          ],
+          "shouldNotDo": [
+            "Do not panic or make cash payments",
+            "Do not sign any document without reading"
+          ],
+          "lawyer": {
+            "required": false,
+            "condition": "Yes if FIR is actually registered or notice is received"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "fake_challan",
+      "title": "Fake or Inflated Traffic Challan",
+      "description": "Traffic fine demanded without valid offence or proof.",
+      "variants": [
+        {
+          "id": "overcharge",
+          "trigger": "Police demanding fine higher than expected",
+          "shouldDo": [
+            "Ask for official e-challan or receipt",
+            "Ask under which offence section fine is charged",
+            "Verify challan on official portal later"
+          ],
+          "shouldNotDo": [
+            "Do not pay cash without receipt",
+            "Do not argue or raise voice"
+          ],
+          "lawyer": {
+            "required": false,
+            "condition": "Only if repeated harassment occurs"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "domestic_violence",
+      "title": "Domestic Violence / Safety Concern",
+      "description": "Physical, emotional, or financial abuse at home.",
+      "variants": [
+        {
+          "id": "immediate_risk",
+          "trigger": "I feel unsafe right now",
+          "shouldDo": [
+            "Ensure immediate safety and move to a safe place",
+            "Call emergency or local helpline",
+            "Reach out to trusted person"
+          ],
+          "shouldNotDo": [
+            "Do not stay alone in unsafe situation",
+            "Do not hesitate to seek help"
+          ],
+          "lawyer": {
+            "required": true,
+            "condition": "If abuse continues or formal complaint is needed"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "bribery",
+      "title": "Bribery Demand in Government Work",
+      "description": "Illegal demand of money for official services.",
+      "variants": [
+        {
+          "id": "service_bribe",
+          "trigger": "Official asking money to process my work",
+          "shouldDo": [
+            "Ask for written reason for delay",
+            "Note date, place, and department",
+            "Use official complaint or grievance portal"
+          ],
+          "shouldNotDo": [
+            "Do not pay cash without receipt",
+            "Do not confront aggressively"
+          ],
+          "lawyer": {
+            "required": false,
+            "condition": "Yes if retaliation or notice is issued"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "illegal_tax",
+      "title": "Illegal or Random Tax / Fine Collection",
+      "description": "Unverified tax or fine demanded by officials.",
+      "variants": [
+        {
+          "id": "random_demand",
+          "trigger": "Asked to pay tax or fine without written order",
+          "shouldDo": [
+            "Ask for written notice or official order",
+            "Verify department and authority",
+            "Check official portal for dues"
+          ],
+          "shouldNotDo": [
+            "Do not make on-the-spot cash payments",
+            "Do not sign blank documents"
+          ],
+          "lawyer": {
+            "required": false,
+            "condition": "Yes if notice or seizure is threatened"
+          }
+        }
+      ]
+    }
+  ],
+  "disclaimer": "This app provides general legal guidance only and does not constitute legal advice."
+}
